@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A9E42A12A06AF5C00F69C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E42A02A06AF5C00F69C15 /* AppDelegate.swift */; };
-		1A9E42A52A06AF5C00F69C15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E42A42A06AF5C00F69C15 /* ViewController.swift */; };
 		1A9E42A82A06AF5C00F69C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9E42A62A06AF5C00F69C15 /* Main.storyboard */; };
 		1A9E42AB2A06AF5C00F69C15 /* PersonalManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E42A92A06AF5C00F69C15 /* PersonalManagement.xcdatamodeld */; };
 		1A9E42AD2A06AF5F00F69C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9E42AC2A06AF5F00F69C15 /* Assets.xcassets */; };
@@ -19,6 +18,8 @@
 		1A9E42C22A06B1D900F69C15 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E42C12A06B1D900F69C15 /* CoordinatorProtocol.swift */; };
 		1A9E42C42A06B2ED00F69C15 /* StartedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E42C32A06B2ED00F69C15 /* StartedCoordinator.swift */; };
 		1A9E42C62A06B35300F69C15 /* StartedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E42C52A06B35300F69C15 /* StartedViewModel.swift */; };
+		1A9E42CA2A06C9BF00F69C15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E42C82A06C9BF00F69C15 /* LoginViewController.swift */; };
+		1A9E42CB2A06C9BF00F69C15 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9E42C92A06C9BF00F69C15 /* LoginViewController.xib */; };
 		3B2700BAB99691A5BDEE54F5 /* Pods_PersonalManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4145E5800EB27A5B6ACCD968 /* Pods_PersonalManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,6 @@
 		145CFEBB5295BDBC67009416 /* Pods-PersonalManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalManagement.debug.xcconfig"; path = "Target Support Files/Pods-PersonalManagement/Pods-PersonalManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		1A9E429D2A06AF5C00F69C15 /* PersonalManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9E42A02A06AF5C00F69C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A9E42A42A06AF5C00F69C15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A9E42A72A06AF5C00F69C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A9E42AA2A06AF5C00F69C15 /* PersonalManagement.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonalManagement.xcdatamodel; sourceTree = "<group>"; };
 		1A9E42AC2A06AF5F00F69C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		1A9E42C12A06B1D900F69C15 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		1A9E42C32A06B2ED00F69C15 /* StartedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartedCoordinator.swift; sourceTree = "<group>"; };
 		1A9E42C52A06B35300F69C15 /* StartedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartedViewModel.swift; sourceTree = "<group>"; };
+		1A9E42C82A06C9BF00F69C15 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1A9E42C92A06C9BF00F69C15 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		4145E5800EB27A5B6ACCD968 /* Pods_PersonalManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98641E30377BA7E4A084204E /* Pods-PersonalManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalManagement.release.xcconfig"; path = "Target Support Files/Pods-PersonalManagement/Pods-PersonalManagement.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +80,6 @@
 				1A9E42BD2A06B15E00F69C15 /* Common */,
 				1A9E42B72A06AFD800F69C15 /* Sences */,
 				1A9E42A02A06AF5C00F69C15 /* AppDelegate.swift */,
-				1A9E42A42A06AF5C00F69C15 /* ViewController.swift */,
 				1A9E42A62A06AF5C00F69C15 /* Main.storyboard */,
 				1A9E42AC2A06AF5F00F69C15 /* Assets.xcassets */,
 				1A9E42AE2A06AF5F00F69C15 /* LaunchScreen.storyboard */,
@@ -91,6 +92,7 @@
 		1A9E42B72A06AFD800F69C15 /* Sences */ = {
 			isa = PBXGroup;
 			children = (
+				1A9E42C72A06C85300F69C15 /* LoginScreen */,
 				1A9E42B82A06B00500F69C15 /* StartedScreen */,
 			);
 			path = Sences;
@@ -124,13 +126,21 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		1A9E42C72A06C85300F69C15 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1A9E42C82A06C9BF00F69C15 /* LoginViewController.swift */,
+				1A9E42C92A06C9BF00F69C15 /* LoginViewController.xib */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
 		A2DCBD51248C11951A18B10A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				145CFEBB5295BDBC67009416 /* Pods-PersonalManagement.debug.xcconfig */,
 				98641E30377BA7E4A084204E /* Pods-PersonalManagement.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -202,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9E42CB2A06C9BF00F69C15 /* LoginViewController.xib in Resources */,
 				1A9E42BC2A06B11800F69C15 /* StartedViewController.xib in Resources */,
 				1A9E42B02A06AF5F00F69C15 /* LaunchScreen.storyboard in Resources */,
 				1A9E42AD2A06AF5F00F69C15 /* Assets.xcassets in Resources */,
@@ -261,8 +272,8 @@
 				1A9E42C22A06B1D900F69C15 /* CoordinatorProtocol.swift in Sources */,
 				1A9E42AB2A06AF5C00F69C15 /* PersonalManagement.xcdatamodeld in Sources */,
 				1A9E42BB2A06B11800F69C15 /* StartedViewController.swift in Sources */,
-				1A9E42A52A06AF5C00F69C15 /* ViewController.swift in Sources */,
 				1A9E42C62A06B35300F69C15 /* StartedViewModel.swift in Sources */,
+				1A9E42CA2A06C9BF00F69C15 /* LoginViewController.swift in Sources */,
 				1A9E42BF2A06B18600F69C15 /* BaseNavigationViewController.swift in Sources */,
 				1A9E42A12A06AF5C00F69C15 /* AppDelegate.swift in Sources */,
 				1A9E42C42A06B2ED00F69C15 /* StartedCoordinator.swift in Sources */,

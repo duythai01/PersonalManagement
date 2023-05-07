@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -11,19 +11,72 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartedViewController" customModule="PersonalManagement" customModuleProvider="target">
             <connections>
+                <outlet property="getStartedButton" destination="abe-C6-jKc" id="m7s-Lp-vXv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starteds" translatesAutoresizingMaskIntoConstraints="NO" id="eQm-3q-TJl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abe-C6-jKc">
+                    <rect key="frame" x="20" y="816" width="374" height="46"/>
+                    <color key="backgroundColor" red="0.44705885649999999" green="0.91764706370000004" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="Umv-cZ-9O0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="GET STARTED">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let Management Your Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svm-F1-PS0">
+                    <rect key="frame" x="20" y="217" width="374" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="TYA-wA-Ep5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <size key="shadowOffset" width="2" height="2"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="t’s hard to beat a person who never gives up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRp-9b-p6t">
+                    <rect key="frame" x="20" y="335" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="m3K-eK-UYl"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
-            <point key="canvasLocation" x="-34" y="-11"/>
+            <constraints>
+                <constraint firstItem="svm-F1-PS0" firstAttribute="leading" secondItem="m3K-eK-UYl" secondAttribute="leading" constant="20" id="NMR-e0-peZ"/>
+                <constraint firstItem="eQm-3q-TJl" firstAttribute="top" secondItem="svm-F1-PS0" secondAttribute="bottom" constant="-305" id="OkS-Ui-EQC"/>
+                <constraint firstItem="abe-C6-jKc" firstAttribute="leading" secondItem="m3K-eK-UYl" secondAttribute="leading" constant="20" id="RcK-aZ-OH9"/>
+                <constraint firstAttribute="trailing" secondItem="eQm-3q-TJl" secondAttribute="trailing" id="SML-8V-M0h"/>
+                <constraint firstItem="cRp-9b-p6t" firstAttribute="leading" secondItem="m3K-eK-UYl" secondAttribute="leading" constant="20" id="TPb-68-7qo"/>
+                <constraint firstAttribute="bottom" secondItem="eQm-3q-TJl" secondAttribute="bottom" id="TXZ-N4-Efl"/>
+                <constraint firstItem="cRp-9b-p6t" firstAttribute="top" secondItem="svm-F1-PS0" secondAttribute="bottom" constant="30" id="ijg-aR-ADi"/>
+                <constraint firstItem="m3K-eK-UYl" firstAttribute="trailing" secondItem="abe-C6-jKc" secondAttribute="trailing" constant="20" id="kLQ-JG-4ul"/>
+                <constraint firstAttribute="trailing" secondItem="svm-F1-PS0" secondAttribute="trailing" constant="20" id="mkb-pg-d3E"/>
+                <constraint firstItem="m3K-eK-UYl" firstAttribute="trailing" secondItem="cRp-9b-p6t" secondAttribute="trailing" constant="20" id="rd2-x3-vPX"/>
+                <constraint firstItem="eQm-3q-TJl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xF3-h5-0Qh"/>
+                <constraint firstItem="m3K-eK-UYl" firstAttribute="bottom" secondItem="abe-C6-jKc" secondAttribute="bottom" id="zGw-qU-DhL"/>
+                <constraint firstItem="eQm-3q-TJl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zcb-sb-6W7"/>
+            </constraints>
+            <point key="canvasLocation" x="-34.782608695652179" y="-11.383928571428571"/>
         </view>
     </objects>
     <resources>
+        <image name="starteds" width="474" height="948"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

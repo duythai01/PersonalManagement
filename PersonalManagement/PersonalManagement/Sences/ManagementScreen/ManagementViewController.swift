@@ -1,19 +1,20 @@
 //
-//  ViewController.swift
+//  ManagementViewController.swift
 //  PersonalManagement
 //
-//  Created by DuyThai on 06/05/2023.
+//  Created by DuyThai on 08/05/2023.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ManagementViewController: UIViewController {
 
+    var viewModel: ManagementViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
 
 }
-

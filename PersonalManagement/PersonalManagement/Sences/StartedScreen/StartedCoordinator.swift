@@ -15,4 +15,9 @@ struct StartedCoordinator {
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: true)
     }
+
+    func toLoginViewController() {
+        let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+        loginCoordinator.start()
+    }
 }

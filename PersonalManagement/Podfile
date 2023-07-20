@@ -12,4 +12,11 @@ target 'PersonalManagement' do
   pod 'Then'
   pod 'ObjectMapper'
 
+  #View
+  pod 'Material', '3.1.0'
+  pod 'SnapKit', '4.2'
+  pod 'PanModal'
+  pod 'DGCharts'
+  pod 'TinyConstraints'
+
 end

@@ -12,15 +12,15 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var staredCoordinator: StartedCoordinator?
+    var staredCoordinator: MainTabBarCoordinator?
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = BaseNavigationController()
-        staredCoordinator = StartedCoordinator(navigationController: navigationController)
-        staredCoordinator?.start()
+        staredCoordinator = MainTabBarCoordinator(navigationController: navigationController)
+        staredCoordinator?.toMainTabBar()
         navigationController.isNavigationBarHidden = true
         UINavigationBar.appearance().tintColor = .white
         window?.rootViewController = navigationController

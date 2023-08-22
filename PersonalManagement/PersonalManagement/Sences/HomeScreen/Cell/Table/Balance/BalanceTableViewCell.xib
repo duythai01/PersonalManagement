@@ -37,7 +37,7 @@
                                                             <constraint firstAttribute="height" constant="32" id="X8d-jw-pAg"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eoq-Aa-6uD" customClass="customView" customModule="PersonalManagement" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eoq-Aa-6uD" customClass="customShadowView" customModule="PersonalManagement" customModuleProvider="target">
                                                         <rect key="frame" x="120.66666666666666" y="21" width="80" height="32"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zi-Fa-ee4">
@@ -133,7 +133,7 @@
                                                             <constraint firstAttribute="width" constant="32" id="lon-CI-Ozp"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X2-JC-Adi" customClass="customView" customModule="PersonalManagement" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X2-JC-Adi" customClass="customShadowView" customModule="PersonalManagement" customModuleProvider="target">
                                                         <rect key="frame" x="128.33333333333334" y="21" width="80" height="32"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SkG-y9-V5h">

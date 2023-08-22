@@ -11,10 +11,10 @@ final class BalanceTableViewCell: UITableViewCell, ReuseCellType {
 
     @IBOutlet private weak var outcomeMoneyLabel: UILabel!
     @IBOutlet private weak var outcomePercentLabel: UILabel!
-    @IBOutlet private weak var outcomePercentContainerView: customView!
+    @IBOutlet private weak var outcomePercentContainerView: customShadowView!
     @IBOutlet private weak var incomeMoneyLabel: UILabel!
     @IBOutlet private weak var incomePercentLabel: UILabel!
-    @IBOutlet private weak var incomePercentContainerView: customView!
+    @IBOutlet private weak var incomePercentContainerView: customShadowView!
     @IBOutlet private weak var outcomeContainerView: UIView!
     @IBOutlet private weak var incomeContainerView: UIView!
 
@@ -123,19 +123,8 @@ final class BalanceTableViewCell: UITableViewCell, ReuseCellType {
     
 }
 
-extension UIView {
-    func applyShadow(color: CGColor = UIColor.black.cgColor,
-                     offSet: CGSize = CGSize(width: 2, height: 2),
-                     alpha: Float = 0.3,
-                     shadowRadius: CGFloat = 1) {
-        layer.shadowColor = color
-        layer.shadowOffset = offSet
-        layer.shadowOpacity = alpha
-        layer.shadowRadius = shadowRadius
-    }
-}
 
-final class customView: UIView {
+final class customShadowView: UIView {
     private var shadowLayer: CAShapeLayer!
 
        override func layoutSubviews() {

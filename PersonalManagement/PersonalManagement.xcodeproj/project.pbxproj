@@ -13,6 +13,8 @@
 		1A5988B22A35DBB4005B6B77 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5988B02A35DBB4005B6B77 /* ChartTableViewCell.xib */; };
 		1A5988B52A381C31005B6B77 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5988B32A381C31005B6B77 /* WalletViewController.swift */; };
 		1A5988B62A381C31005B6B77 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5988B42A381C31005B6B77 /* WalletViewController.xib */; };
+		1A84ED992A691AAB002E7B8C /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84ED972A691AAB002E7B8C /* CardTableViewCell.swift */; };
+		1A84ED9A2A691AAB002E7B8C /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A84ED982A691AAB002E7B8C /* CardTableViewCell.xib */; };
 		1A88C44F2A43F02700F73B98 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A88C44D2A43F02700F73B98 /* TagCollectionViewCell.swift */; };
 		1A88C4502A43F02700F73B98 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A88C44E2A43F02700F73B98 /* TagCollectionViewCell.xib */; };
 		1A9E42A12A06AF5C00F69C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9E42A02A06AF5C00F69C15 /* AppDelegate.swift */; };
@@ -77,6 +79,8 @@
 		1A5988B02A35DBB4005B6B77 /* ChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
 		1A5988B32A381C31005B6B77 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		1A5988B42A381C31005B6B77 /* WalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletViewController.xib; sourceTree = "<group>"; };
+		1A84ED972A691AAB002E7B8C /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		1A84ED982A691AAB002E7B8C /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
 		1A88C44D2A43F02700F73B98 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A88C44E2A43F02700F73B98 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		1A9E429D2A06AF5C00F69C15 /* PersonalManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +170,15 @@
 				1A5988B02A35DBB4005B6B77 /* ChartTableViewCell.xib */,
 			);
 			path = Chart;
+			sourceTree = "<group>";
+		};
+		1A84ED962A691A8C002E7B8C /* CardCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A84ED972A691AAB002E7B8C /* CardTableViewCell.swift */,
+				1A84ED982A691AAB002E7B8C /* CardTableViewCell.xib */,
+			);
+			path = CardCell;
 			sourceTree = "<group>";
 		};
 		1A9E42942A06AF5C00F69C15 = {
@@ -319,6 +332,7 @@
 		1AA8F3662A089C0E004138C2 /* NotificationScreen */ = {
 			isa = PBXGroup;
 			children = (
+				1A84ED962A691A8C002E7B8C /* CardCell */,
 				1AA8F3752A089CB8004138C2 /* NotificationViewController.swift */,
 				1AA8F3762A089CB8004138C2 /* NotificationViewController.xib */,
 				1AA8F38C2A089F3E004138C2 /* NotificationViewModel.swift */,
@@ -511,6 +525,7 @@
 				1AA8F3A52A0B4CE6004138C2 /* NoteTableViewCell.xib in Resources */,
 				1AA8F36C2A089C83004138C2 /* HomeViewController.xib in Resources */,
 				1A5988B22A35DBB4005B6B77 /* ChartTableViewCell.xib in Resources */,
+				1A84ED9A2A691AAB002E7B8C /* CardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +592,7 @@
 				1AA8F3832A089D9B004138C2 /* HomeViewModel.swift in Sources */,
 				1AA8F3872A089E4B004138C2 /* ManagementCoordinator.swift in Sources */,
 				1AA8F39E2A0B4BF7004138C2 /* BalanceTableViewCell.swift in Sources */,
+				1A84ED992A691AAB002E7B8C /* CardTableViewCell.swift in Sources */,
 				1AA8F3B22A0B6A5E004138C2 /* UICollectionView+.swift in Sources */,
 				1AA8F37E2A089D2C004138C2 /* MainTabBarViewController.swift in Sources */,
 				1A9E42BB2A06B11800F69C15 /* StartedViewController.swift in Sources */,

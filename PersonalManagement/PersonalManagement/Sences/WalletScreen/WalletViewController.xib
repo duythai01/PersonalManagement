@@ -15,6 +15,7 @@
                 <outlet property="avatarImageView" destination="pGz-m6-XJz" id="6Pu-Ap-a3g"/>
                 <outlet property="bottomContainerView" destination="q3K-1b-AA4" id="jXf-Gt-rBZ"/>
                 <outlet property="bottomContainerViewTopContrait" destination="bS6-5G-y7A" id="hOL-o8-ImV"/>
+                <outlet property="categoryViewTopContrait" destination="fkx-cS-0dc" id="jMa-eP-suB"/>
                 <outlet property="chartContainerView" destination="7Nv-to-AKC" id="xd4-1T-LDO"/>
                 <outlet property="collectionView" destination="1Zy-5d-20r" id="fYG-Rc-sh3"/>
                 <outlet property="functionContainerView" destination="uvB-J0-lbb" id="JoV-6A-lYC"/>
@@ -147,6 +148,9 @@
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                         </preferredSymbolConfiguration>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="qrScannerTapped:" destination="-1" eventType="touchUpInside" id="7Yj-nu-rHN"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osE-FO-WqX">
                                                     <rect key="frame" x="149" y="0.0" width="36" height="36"/>

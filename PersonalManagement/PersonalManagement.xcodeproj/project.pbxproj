@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1A212EC32A3DD01800A0396D /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A212EC12A3DD01800A0396D /* CoinTableViewCell.swift */; };
 		1A212EC42A3DD01800A0396D /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A212EC22A3DD01800A0396D /* CoinTableViewCell.xib */; };
+		1A252EC92A9F29540013DF2F /* s.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A252EC82A9F29540013DF2F /* s.swift */; };
+		1A252ECC2A9F32330013DF2F /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A252ECA2A9F32330013DF2F /* QRScannerViewController.swift */; };
+		1A252ECD2A9F32330013DF2F /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A252ECB2A9F32330013DF2F /* QRScannerViewController.xib */; };
 		1A5648442A9702E200F91A11 /* EventWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5648432A9702E200F91A11 /* EventWrapper.swift */; };
 		1A5648462A971E9500F91A11 /* CalendarDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5648452A971E9500F91A11 /* CalendarDayViewController.swift */; };
 		1A5988B12A35DBB4005B6B77 /* ChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5988AF2A35DBB4005B6B77 /* ChartTableViewCell.swift */; };
@@ -77,6 +80,9 @@
 		145CFEBB5295BDBC67009416 /* Pods-PersonalManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalManagement.debug.xcconfig"; path = "Target Support Files/Pods-PersonalManagement/Pods-PersonalManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		1A212EC12A3DD01800A0396D /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
 		1A212EC22A3DD01800A0396D /* CoinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinTableViewCell.xib; sourceTree = "<group>"; };
+		1A252EC82A9F29540013DF2F /* s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s.swift; sourceTree = "<group>"; };
+		1A252ECA2A9F32330013DF2F /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		1A252ECB2A9F32330013DF2F /* QRScannerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRScannerViewController.xib; sourceTree = "<group>"; };
 		1A5648432A9702E200F91A11 /* EventWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWrapper.swift; sourceTree = "<group>"; };
 		1A5648452A971E9500F91A11 /* CalendarDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarDayViewController.swift; path = PersonalManagement/Sences/SettingScreen/CalendarDayViewController.swift; sourceTree = SOURCE_ROOT; };
 		1A5988AF2A35DBB4005B6B77 /* ChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +171,16 @@
 				1A88C44E2A43F02700F73B98 /* TagCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1A252EC72A9F28FD0013DF2F /* QRViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A252EC82A9F29540013DF2F /* s.swift */,
+				1A252ECA2A9F32330013DF2F /* QRScannerViewController.swift */,
+				1A252ECB2A9F32330013DF2F /* QRScannerViewController.xib */,
+			);
+			path = QRViewController;
 			sourceTree = "<group>";
 		};
 		1A5648422A9702B800F91A11 /* CalendarScreen */ = {
@@ -390,6 +406,7 @@
 		1AA8F3902A08A1C1004138C2 /* WalletScreen */ = {
 			isa = PBXGroup;
 			children = (
+				1A252EC72A9F28FD0013DF2F /* QRViewController */,
 				1A212EC02A3DCFF400A0396D /* Cell */,
 				1AA8F3952A08A218004138C2 /* WalletViewModel.swift */,
 				1AA8F3972A08A240004138C2 /* WalletCoordinator.swift */,
@@ -537,6 +554,7 @@
 				1AA8F39F2A0B4BF7004138C2 /* BalanceTableViewCell.xib in Resources */,
 				1A5988B62A381C31005B6B77 /* WalletViewController.xib in Resources */,
 				1AA8F3A52A0B4CE6004138C2 /* NoteTableViewCell.xib in Resources */,
+				1A252ECD2A9F32330013DF2F /* QRScannerViewController.xib in Resources */,
 				1AA8F36C2A089C83004138C2 /* HomeViewController.xib in Resources */,
 				1A5988B22A35DBB4005B6B77 /* ChartTableViewCell.xib in Resources */,
 				1A84ED9A2A691AAB002E7B8C /* CardTableViewCell.xib in Resources */,
@@ -609,6 +627,7 @@
 				1AA8F39E2A0B4BF7004138C2 /* BalanceTableViewCell.swift in Sources */,
 				1A84ED992A691AAB002E7B8C /* CardTableViewCell.swift in Sources */,
 				1AA8F3B22A0B6A5E004138C2 /* UICollectionView+.swift in Sources */,
+				1A252ECC2A9F32330013DF2F /* QRScannerViewController.swift in Sources */,
 				1AA8F37E2A089D2C004138C2 /* MainTabBarViewController.swift in Sources */,
 				1A9E42BB2A06B11800F69C15 /* StartedViewController.swift in Sources */,
 				1A212EC32A3DD01800A0396D /* CoinTableViewCell.swift in Sources */,
@@ -633,6 +652,7 @@
 				1AA8F35F2A08901B004138C2 /* UIView+.swift in Sources */,
 				1AAA2FA02A07B80100220D9A /* LoginViewModel.swift in Sources */,
 				1AA8F3592A088F74004138C2 /* UITextField+.swift in Sources */,
+				1A252EC92A9F29540013DF2F /* s.swift in Sources */,
 				1AA8F3B02A0B6A1A004138C2 /* UITableView+.swift in Sources */,
 				1AA8F3812A089D8E004138C2 /* HomeCoordinator.swift in Sources */,
 				1AA8F3A42A0B4CE6004138C2 /* NoteTableViewCell.swift in Sources */,

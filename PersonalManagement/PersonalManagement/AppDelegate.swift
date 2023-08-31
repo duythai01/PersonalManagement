@@ -29,9 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         staredCoordinator = MainTabBarCoordinator(navigationController: navigationController)
         staredCoordinator?.toMainTabBar()
         navigationController.isNavigationBarHidden = true
-        UINavigationBar.appearance().tintColor = .white
         window?.rootViewController = navigationController
-        window?.overrideUserInterfaceStyle = .dark
+        window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
         return true
     }

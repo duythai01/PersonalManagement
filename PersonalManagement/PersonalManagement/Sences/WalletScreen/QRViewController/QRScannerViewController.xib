@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRScannerViewController" customModule="PersonalManagement" customModuleProvider="target">
+            <connections>
+                <outlet property="scannerView" destination="dRy-1c-NUn" id="CqW-zJ-zAV"/>
+                <outlet property="textView" destination="wxV-k3-awX" id="qIm-XD-gPL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webVIew" destination="8EU-Lx-Khd" id="itg-IN-ZbB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRy-1c-NUn">
+                    <rect key="frame" x="16" y="59" width="361" height="361"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="dRy-1c-NUn" secondAttribute="height" multiplier="1:1" id="TrU-BM-Tea"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wo8-v4-LQf">
+                    <rect key="frame" x="171.66666666666666" y="499" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="95f-1K-hSr"/>
+                        <constraint firstAttribute="width" constant="50" id="Msy-cL-2iB"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="qrcode.viewfinder" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="41"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="captủeBUtton:" destination="-1" eventType="touchUpInside" id="xrc-lo-Xgn"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxV-k3-awX">
+                    <rect key="frame" x="16" y="557" width="361" height="20"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="mEg-0v-pUj"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                </textView>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EU-Lx-Khd">
+                    <rect key="frame" x="16" y="585" width="361" height="233"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <constraints>
+                <constraint firstItem="8EU-Lx-Khd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="H7K-Bj-EFn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8EU-Lx-Khd" secondAttribute="bottom" id="Iif-rH-gqD"/>
+                <constraint firstItem="wxV-k3-awX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KJR-7n-Ztu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dRy-1c-NUn" secondAttribute="trailing" constant="16" id="MEI-IJ-b6x"/>
+                <constraint firstItem="dRy-1c-NUn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Txb-5O-QUa"/>
+                <constraint firstItem="dRy-1c-NUn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="gBZ-tf-C5I"/>
+                <constraint firstItem="wo8-v4-LQf" firstAttribute="top" secondItem="dRy-1c-NUn" secondAttribute="bottom" constant="79" id="jOz-tU-VjX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8EU-Lx-Khd" secondAttribute="trailing" constant="16" id="n9O-e5-3Ks"/>
+                <constraint firstItem="wxV-k3-awX" firstAttribute="top" secondItem="wo8-v4-LQf" secondAttribute="bottom" constant="8" id="qG8-N8-z1D"/>
+                <constraint firstItem="wxV-k3-awX" firstAttribute="centerX" secondItem="wo8-v4-LQf" secondAttribute="centerX" id="u5P-H6-tgq"/>
+                <constraint firstItem="wo8-v4-LQf" firstAttribute="centerX" secondItem="dRy-1c-NUn" secondAttribute="centerX" id="uiR-oi-Y62"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wxV-k3-awX" secondAttribute="trailing" constant="16" id="z5z-YK-Nmb"/>
+                <constraint firstItem="8EU-Lx-Khd" firstAttribute="top" secondItem="wxV-k3-awX" secondAttribute="bottom" constant="8" id="z93-kf-UWW"/>
+            </constraints>
+            <point key="canvasLocation" x="75.572519083969468" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

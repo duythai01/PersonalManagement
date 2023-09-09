@@ -112,9 +112,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="background" destination="TSa-EX-Y4G" id="TcX-Ob-KxR"/>
-                <outlet property="containerShadowView" destination="nKg-5I-9WS" id="XOd-fL-TR5"/>
-                <outlet property="containerView" destination="q1R-vH-7zF" id="FNN-yU-BCw"/>
+                <outlet property="background" destination="TSa-EX-Y4G" id="vyp-GD-AaL"/>
+                <outlet property="containerShadowView" destination="nKg-5I-9WS" id="pP6-Bw-2xB"/>
+                <outlet property="containerView" destination="q1R-vH-7zF" id="HTb-Qh-Nr3"/>
                 <outlet property="currentBalanceLabel" destination="TlV-u7-PL2" id="xtf-SA-UKN"/>
                 <outlet property="expiredDateLabel" destination="cfe-42-NnD" id="GUl-yk-VlJ"/>
                 <outlet property="serialNumberLabel" destination="icM-iD-el7" id="uTJ-yU-YaY"/>

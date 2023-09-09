@@ -134,8 +134,11 @@
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                         </preferredSymbolConfiguration>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="walletTapped:" destination="-1" eventType="touchUpInside" id="7cq-lE-QWy"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg9-TN-Ycy">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg9-TN-Ycy" userLabel="QRScannerButton">
                                                     <rect key="frame" x="99.5" y="0.0" width="36" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="fg9-TN-Ycy" secondAttribute="height" multiplier="1:1" id="qog-rP-em4"/>
@@ -149,7 +152,7 @@
                                                         </preferredSymbolConfiguration>
                                                     </state>
                                                     <connections>
-                                                        <action selector="qrScannerTapped:" destination="-1" eventType="touchUpInside" id="7Yj-nu-rHN"/>
+                                                        <action selector="qrScannerTapped:" destination="-1" eventType="touchUpInside" id="3AC-sk-DZA"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osE-FO-WqX">
@@ -223,6 +226,9 @@
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                         </preferredSymbolConfiguration>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="walletTapped:" destination="-1" eventType="touchUpInside" id="c2u-R6-tcN"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6b-NT-e6m">
                                                     <rect key="frame" x="161" y="0.0" width="2" height="44"/>
@@ -231,7 +237,7 @@
                                                         <constraint firstAttribute="width" constant="2" id="mwW-lC-P1f"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc3-x0-U7o">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc3-x0-U7o" userLabel="QRScannerButton">
                                                     <rect key="frame" x="186.5" y="0.0" width="44" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="yc3-x0-U7o" secondAttribute="height" multiplier="1:1" id="9CA-hC-6nb"/>
@@ -244,6 +250,9 @@
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                         </preferredSymbolConfiguration>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="qrScannerTapped:" destination="-1" eventType="touchUpInside" id="luM-Yu-Vhw"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3v-jJ-XEE">
                                                     <rect key="frame" x="254.5" y="0.0" width="2" height="44"/>

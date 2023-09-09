@@ -15,4 +15,9 @@ struct WalletCoordinator {
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: true)
     }
+
+    func toQRViewController() {
+        let viewController = QRScannerViewController()
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }

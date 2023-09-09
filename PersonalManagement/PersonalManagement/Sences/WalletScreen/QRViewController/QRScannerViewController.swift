@@ -8,13 +8,11 @@ class QRScannerViewController: UIViewController, UITextViewDelegate, AVCaptureVi
     @IBOutlet weak var webVIew: WKWebView!
     @IBOutlet weak var textView: UITextView!
 
-    var detectView: UIView!
-
-
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
-    var photoOutput: AVCapturePhotoOutput!
-    var latetQRcodeValue = ""
+    private var detectView: UIView!
+    private var captureSession: AVCaptureSession!
+    private var previewLayer: AVCaptureVideoPreviewLayer!
+    private var photoOutput: AVCapturePhotoOutput!
+    private var latetQRcodeValue = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +28,8 @@ class QRScannerViewController: UIViewController, UITextViewDelegate, AVCaptureVi
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //        detectView.frame = scannerView.frame
         view.addSubview(detectView)
-        
-        detectView.isHidden = false
+        detectView.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
 
@@ -71,30 +67,9 @@ class QRScannerViewController: UIViewController, UITextViewDelegate, AVCaptureVi
 
     }
 
-    func capturePhoto() {
+    private func capturePhoto() {
         let settings = AVCapturePhotoSettings()
         photoOutput.capturePhoto(with: settings, delegate: self)
-    }
-
-
-
-    private func detectQRCode(in image: UIImage) {
-        // Convert the UIImage to a CIImage
-        guard let ciImage = CIImage(image: image) else {
-            return
-        }
-
-        // Set up the detector
-        let context = CIContext()
-        let qrCodeDetector = CIDetector(ofType: CIDetectorTypeQRCode, context: context, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
-
-        // Detect QR codes
-        if let features = qrCodeDetector?.features(in: ciImage) {
-            for feature in features as! [CIQRCodeFeature] {
-                print("QR Code Value from Detector: \(feature.messageString ?? "")")
-                // Process the QR code value from detection here
-            }
-        }
     }
 
     private func initScannerView() {
@@ -186,58 +161,24 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
         for metadataObject in metadataObjects {
             if let qrCodeObject = metadataObject as? AVMetadataMachineReadableCodeObject {
                 if let qrCodeValue = qrCodeObject.stringValue {
+
                     let qrCodeBounds = qrCodeObject.bounds
-                    print("------------------------------------------------------------------------------")
-
-                    // Handle the QR code value (e.g., display it, perform an action, etc.).
-//                    print("Detected QR code: \(qrCodeValue)")
-                    print("QR Code Position: \(qrCodeBounds.origin.x), \(qrCodeBounds.origin.y)")
-                    print("QR Code width - height : \(qrCodeBounds.width), \(qrCodeBounds.height)")
-
-//                    print("ScannView Position: \(self.scannerView.frame.origin.x), \(self.scannerView.frame.origin.y)")
-//
-//                    print("Sanview width - height : \(self.scannerView.frame.size.width), \(self.scannerView.frame.size.height)")
-//                    let qrCodeFrameInPreviewLayer = previewLayer.layerRectConverted(fromMetadataOutputRect: qrCodeBounds)
-                    print("------------------------------------------------------------------------------")
 
                     let qrCodePositionInTargetView = previewLayer.layerRectConverted(fromMetadataOutputRect: qrCodeBounds).intersection(self.scannerView.bounds)
-                    print("qrCodePositionInTargetView Position: \(qrCodePositionInTargetView.origin.x), \(qrCodePositionInTargetView.origin.y)")
-                    print("qrCodePositionInTargetView width - height : \(qrCodePositionInTargetView.width), \(qrCodePositionInTargetView.height)")
 
-                    print("------------------------------------------------------------------------------")
-                    print("QRscanner Position: \(self.scannerView.frame.origin.x), \(self.scannerView.frame.origin.y)")
-                    print("Qrscanner  width - height : \(self.scannerView.frame.size.width),  \(self.scannerView.frame.size.height)")
-
-                    print("------------------------------------------------------------------------------")
-                    print("Caculator Position: \((qrCodeBounds.origin.x * self.scannerView.frame.size.width) + self.scannerView.frame.origin.x), \((qrCodeBounds.origin.y * self.scannerView.frame.size.height) + self.scannerView.frame.origin.y)")
-
-//                    print("qrCodePositionInTargetView Position: \(qrCodePositionInTargetView.origin.x), \(qrCodePositionInTargetView.origin.y)")
-//
-//                    print("qrCodePositionInTargetView width - height : \(qrCodePositionInTargetView.size.width), \(qrCodePositionInTargetView.size.height)")
-                    let screenSize: CGSize = UIScreen.main.bounds.size
                     let newOrigin:CGPoint = CGPoint(
                         x: (qrCodeBounds.origin.x * self.scannerView.frame.size.width) + self.scannerView.frame.origin.x,
                         y: (qrCodeBounds.origin.y * self.scannerView.frame.size.height) + self.scannerView.frame.origin.y)
-//                    let newSize: CGSize = CGSize(
-//                        width: qrCodeBounds.width * self.scannerView.frame.size.width,
-//                        height: qrCodeBounds.height * self.scannerView.frame.size.height)
 
                     DispatchQueue.main.async { [weak self] in
                         guard let self = self else { return }
-
-                        UIView.animate(withDuration: 0.1) {
-                            self.detectView.frame = CGRect(origin: newOrigin, size: qrCodePositionInTargetView.size)
-//                            self.detectView.frame = qrCodePositionInTargetView
-
-                        }
-
+                        self.detectView.isHidden = false
+                        self.detectView.frame = CGRect(origin: newOrigin, size: qrCodePositionInTargetView.size)
                     }
 
                     latetQRcodeValue = qrCodeValue
                 }
             }
-
-
         }
     }
 

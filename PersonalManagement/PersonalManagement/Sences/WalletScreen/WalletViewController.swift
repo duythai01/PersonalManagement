@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class WalletViewController: UIViewController {
+final class WalletViewController: UIViewController {
 
     @IBOutlet private weak var topStackView: UIStackView!
     @IBOutlet private weak var topFunctionStackView: UIStackView!
@@ -23,35 +23,46 @@ class WalletViewController: UIViewController {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nameContainerView: UIView!
     @IBOutlet private weak var avatarImageView: UIImageView!
-    @IBOutlet private weak var qrScannerButton: UIButton!
     @IBOutlet private weak var bottomContainerViewTopContrait: NSLayoutConstraint!
     @IBOutlet private weak var topStackViewTopContrait: NSLayoutConstraint!
     @IBOutlet private weak var categoryViewTopContrait: NSLayoutConstraint!
 
+    var viewModel:WalletViewModel!
     private var bottomContainerViewTopContraitValue: CGFloat = 0
     private var topStackViewTopContraitValue: CGFloat = 0
     private var previousContentOffset: CGFloat = 0.0
     private var categoryViewTopContraitValue: CGFloat = 0
-
-
     let tags = ["All", "Favorite", "Needed", "Avatar","Needed", "Avatar", "Needed", "Avatar", "Contribution", "layout-----aaaaaaaaa", "All", "Excd eaaaf"]
-
-    var viewModel: WalletViewModel!
     private var isSelectedChart = true
+
+    private let qrScannerTappedTrigger = PublishSubject<Void>()
+    private let walletTappedTrigger = PublishSubject<Void>()
+    private let exchangeTappedTrigger = PublishSubject<Void>()
+    private let coinTappedTrigger = PublishSubject<Void>()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         bottomContainerViewTopContraitValue = bottomContainerViewTopContrait.constant
         topStackViewTopContraitValue = topStackViewTopContrait.constant
         categoryViewTopContraitValue = categoryViewTopContrait.constant
-        print(topStackViewTopContraitValue)
         configView()
         topFunctionStackView.alpha = 0
     }
-    @IBAction func qrScannerTapped(_ sender: Any) {
+
+    @IBAction private func qrScannerTapped(_ sender: Any) {
         print("QrScanner")
+        qrScannerTappedTrigger.onNext(())
         let qrScannerViewController = QRScannerViewController()
         self.navigationController?.pushViewController(qrScannerViewController, animated: true)
+    }
+
+    @IBAction private func walletTapped(_ sender: Any) {
+        print("QrScanner")
+        walletTappedTrigger.onNext(())
+        let cardViewController = CardViewController()
+        self.navigationController?.pushViewController(cardViewController, animated: true)
     }
 
     private func configView() {
@@ -88,7 +99,6 @@ class WalletViewController: UIViewController {
             $0.dataSource = self
             $0.estimatedRowHeight = UITableView.automaticDimension
             $0.rowHeight = UITableView.automaticDimension
-//            $0.contentInset = UIEdgeInsets(top: -40, left: 0, bottom: -20, right: 0)
             $0.register(nibName: CoinTableViewCell.self)
         }
 
@@ -118,7 +128,7 @@ extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return 80
+        return 80
         
     }
 
@@ -134,37 +144,33 @@ extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
             let topContraitSpaceMax: CGFloat = 22
 
             functionContainerView.alpha = round((alpha) * 10) / 10.0
-            print("alpha: \(round((alpha) * 10) / 10.0)")
             topStackView.alpha = round((alpha) * 10) / 10.0
             topFunctionStackView.alpha = round((1 - alpha) * 10) / 10.0
             nameContainerView.alpha = round((alpha) * 10) / 10.0
 
             let currentContentOffset = scrollView.contentOffset.y
-                    if currentContentOffset > previousContentOffset {
-                        // Scrolling downwards
-                        print("Scrolling Down")
+            if currentContentOffset > previousContentOffset {
+                // Scrolling downwards
+                topStackViewTopContrait.constant =  topStackViewTopContrait.constant > 30 ? topStackViewTopContraitValue * alpha : 30
+                bottomContainerViewTopContrait.constant =  bottomContainerViewTopContrait.constant > 16 ? bottomContainerViewTopContraitValue * alpha : 16
 
-                        topStackViewTopContrait.constant =  topStackViewTopContrait.constant > 30 ? topStackViewTopContraitValue * alpha : 30
-                        bottomContainerViewTopContrait.constant =  bottomContainerViewTopContrait.constant > 16 ? bottomContainerViewTopContraitValue * alpha : 16
+                if (round((alpha) * 10) / 10.0) <= 0.3 {
+                    categoryViewTopContrait.constant = 8 - topContraitSpaceMax
+                }
 
-                        if (round((alpha) * 10) / 10.0) <= 0.3 {
-                            categoryViewTopContrait.constant = 8 - topContraitSpaceMax
-                        }
+            } else if currentContentOffset < previousContentOffset {
+                // Scrolling Up
+                let scaleTopContrait = bottomContainerViewTopContraitValue * alpha
+                bottomContainerViewTopContrait.constant  = scaleTopContrait < 16 ? 16 : scaleTopContrait
 
-                    } else if currentContentOffset < previousContentOffset {
-                        // Scrolling upwards
-                        print("Scrolling Up")
-                         let scaleTopContrait = bottomContainerViewTopContraitValue * alpha
-                        bottomContainerViewTopContrait.constant  = scaleTopContrait < 16 ? 16 : scaleTopContrait
+                topStackViewTopContrait.constant  = topStackViewTopContraitValue * alpha < 30 ? 30 : topStackViewTopContraitValue * alpha
+                if (round((alpha) * 10) / 10.0) >= 0.4 {
+                    categoryViewTopContrait.constant = 8
+                }
 
-                        topStackViewTopContrait.constant  = topStackViewTopContraitValue * alpha < 30 ? 30 : topStackViewTopContraitValue * alpha
-                        if (round((alpha) * 10) / 10.0) >= 0.4 {
-                            categoryViewTopContrait.constant = 8
-                        }
+            }
 
-                    }
-
-                    previousContentOffset = currentContentOffset
+            previousContentOffset = currentContentOffset
         }
     }
 
@@ -190,4 +196,3 @@ extension WalletViewController: UICollectionViewDelegateFlowLayout, UICollection
 
 
 }
-
